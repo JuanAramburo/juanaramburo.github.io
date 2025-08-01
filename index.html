@@ -1,26 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juan Aramburo | Portafolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Juan Aramburo Ing. Tecnologías de la Información</title>
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-blue-600 text-white text-center py-10">
-    <h1 class="text-4xl font-bold">Juan Aramburo</h1>
-    <p class="text-lg mt-2">Desarrollador apasionado por la tecnología y el código abierto</p>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#estudios">Estudios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-content">
+      <div class="presentacion">
+        <h1>Hola, soy Juan Aramburo</h1>
+        <p>Ingeniero en Tecnologías de la Información</p>
+
+        <div class="redesSociales">
+          <a href="https://github.com/JuanAramburo"><img src="/img/github.png" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/juan-ramon-aramburo-osuna-610667371/"><img src="/img/linkedin.png"
+              alt="LinkedIn"></a>
+          <a href="https://www.facebook.com/juan.aramburo.657173/"><img src="/img/facebook.png" alt="Facebook"></a>
+        </div>
+        <a href="#contacto" class="correo">Contáctame</a>
+      </div>
+
+      <img src="/img/CV.png" alt="Juan Aramburo" class="foto-perfil" />
+    </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-semibold mb-6">Mis proyectos en GitHub</h2>
-    <div id="repos" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+  <main>
+    <section id="sobre-mi" class="sobre-mi">
+      <div class="contenido">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy un ingeniero en Tecnologías de la Información que busca una oportunidad en el mundo laboral.
+          Quiero seguir aprendiendo más tecnologías e implementarlas en un trabajo y/o proyectos.
+          Soy una persona motivada y trabajadora que siempre está lista para aprender y adquirir experiencia.
+        </p>
+      </div>
+    </section>
+
+    <section id="proyectos" class="proyectos">
+      <div class="contenido">
+        <h2>Proyectos</h2>
+        <div class="repos-grid">
+
+          <div class="repo-card">
+            <div class="repo-texto">
+              <h3>Aplicación móvil para ESP32</h3>
+              <p>Control de LED RGB por Bluetooth para ESP32</p>
+              <a href="https://github.com/JuanAramburo/RGBESP32" target="_blank"><img src="/img/github.png" alt=""
+                  class="github"></a>
+            </div>
+            <img src="/img/ESP32-with-RGB-LED-through-resistors-connection-diagram.webp" alt="">
+          </div>
+
+          <div class="repo-card">
+            <div class="repo-texto">
+              <h3>Proyecto MazAppBurger (Trabajo en colaboración)</h3>
+              <p>App de pedidos para hamburguesas</p>
+              <a href="https://gitlab.com/8-4/proyectomazzappburguer" target="_blank"><img src="/img/gitlab.png" alt=""
+                  class="github"></a>
+              <a href="https://mazzappburguer.netlify.app/index.html" target="_blank"><img src="/img/sitio-web.png"
+                  alt="" class="github"></a>
+            </div>
+            <img src="/img/logo.png" alt="">
+          </div>
+
+          <div class="repo-card">
+            <div class="repo-texto">
+              <h3>Pagina para Pizzeria</h3>
+              <p>Pagina para una pizzeria de Mazatlán, se uso para proyecto final de la materia Programación Web en la
+                universidad</p>
+              <a href="https://github.com/JuanAramburo/ProyectoFinal" target="_blank"><img src="/img/github.png" alt=""
+                  class="github"></a>
+            </div>
+            <img src="/img/web.jpg" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="estudios" class="estudios">
+      <h2>Estudios</h2>
+      <div class="estudiosCard">
+        <img src="/img/Logo_UPSIN_y_LETRAS-vertical.png" alt="Logo UPSIN">
+        <div class="info-estudios">
+          <h3>Universidad Politécnica de Sinaloa (UPSIN)</h3>
+          <p>Carrera: Ingeniería en Tecnologías de la Información</p>
+          <p>Septiembre 2020 - Actualidad</p>
+        </div>
+      </div>
+
+      <div class="estudiosCard">
+        <img src="/img/UAS_logo.png" alt="Logo UPSIN">
+        <div class="info-estudios">
+          <h3>Universidad Autonoma de Sinaloa (UAS)</h3>
+          <p>Preparatoria Antonio Rosales</p>
+          <p>Fase: Quimico - Biologo</p>
+          <p>Agosto 2017 - Junio 2020</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+
+      <div class="contacto-contenido">
+        <!-- Información personal -->
+        <div class="info-contacto">
+          <p><strong>Correo electrónico:</strong><br><a
+              href="mailto:7juanaramburo@gmail.com">7juanaramburo@gmail.com</a></p>
+          <p><strong>Teléfono:</strong><br><a href="tel:+526691234567">+52 669 123 4567</a></p>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <form class="formulario-contacto" action="mailto:7juanaramburo@gmail.com" method="post" enctype="text/plain">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="bg-gray-900 text-white text-center py-4">
-    <p>© 2025 Juan Aramburo | <a href="https://github.com/JuanAramburo" class="underline">GitHub</a></p>
+  <footer>
+    <p>© 2025 Juan Aramburo. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <button id="backToTop" title="Volver arriba"><img src="/img/flecha-hacia-arriba.png" alt="" class="flecha"></button>
+
 </body>
+<script src="/js/script.js"></script>
+
 </html>

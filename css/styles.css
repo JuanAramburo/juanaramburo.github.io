@@ -1,24 +1,376 @@
-body {
-  font-family: Arial, sans-serif;
+/* Estilos generales */
+body, html {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #00ffff;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #00ffff;
+  transform: scale(1.1);
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* HEADER */
 header {
-  background-color: #333;
+  height: 100vh; /* ocupa toda la pantalla */
+  background: #3F61DE;
   color: white;
-  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* espacio para que no se esconda tras el nav */
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+
+.presentacion {
+  max-width: 500px;
+  text-align: left;
+}
+
+.foto-perfil {
+  width: 275px;
+  height: 350px;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+}
+
+
+/* REDES SOCIALES */
+.redesSociales {
+  display: flex;
+  gap: 1rem;
+}
+
+.redesSociales img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redesSociales img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.4) hue-rotate(45deg);
+}
+
+.correo {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4ED09E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.correo:hover {
+  background-color: #3bbf88;
+}
+
+
+/* SECCIONES */
+/* Secciones generales */
+section {
+  padding: 4rem 2rem;
+  background-color: #4ED09E;
+  text-align: center;
+  color: #000;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sobre-mi{
+  background-color: #7B9BA3;
+}
+
+.contenido {
+  max-width: 800px;
+  margin: auto;
+}
+
+
+.proyectos{
+  background-color: #a7daff;
+}
+
+/* Tarjetas de proyecto */
+.repo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background-color: #292727;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex-wrap: wrap; /* permite que se acomode en pantallas pequeñas */
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  background-color: #e0e0e0;
+}
+
+.repo-card img {
+  max-width: 200px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.repo-texto {
+  color: white;
+  flex: 1;
+  min-width: 250px;
+}
+
+.repo-texto h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.repo-texto p {
+  margin: 0 0 1rem 0;
+}
+
+.repo-texto a {
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #3F61DE;
+  font-weight: bold;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+.repo-texto a:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
+
+}
+
+.github{
+  width: 30px;
+  height: 30px;
+}
+
+.estudios {
+  background-color: #fff4b4;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-section {
+.estudiosCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 2rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
+
+.estudiosCard img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.info-estudios {
+  text-align: left;
+  max-width: 500px;
+}
+
+.info-estudios h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-estudios p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
+.upsin{
+  background-color: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.contacto {
+  background-color: #4ED09E;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contacto-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+.info-contacto {
+  flex: 1 1 250px;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.info-contacto a {
+  color: #00303F;
+  text-decoration: none;
+}
+
+.formulario-contacto {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.formulario-contacto button {
+  background-color: #00303F;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formulario-contacto button:hover {
+  background-color: #001f2b;
+}
+
+
 
 footer {
-  background-color: #222;
-  color: white;
   text-align: center;
   padding: 1rem;
+  background-color: #111;
+  color: white;
 }
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #3F61DE;
+  color: white;
+  border: none;
+  padding: 20px 25px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #005fa3;
+}
+
+.flecha{
+  width: 25px;
+  height: 30px;
+}
+
