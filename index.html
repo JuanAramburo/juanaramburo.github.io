@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan Aramburo Ing. Tecnologías de la Información</title>
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -48,6 +51,13 @@
           Quiero seguir aprendiendo más tecnologías e implementarlas en un trabajo y/o proyectos.
           Soy una persona motivada y trabajadora que siempre está lista para aprender y adquirir experiencia.
         </p>
+      </div>
+
+      <div class="contenido">
+        <h2>Habilidades</h2>
+
+        <div class="imagenes-habilidades">
+        </div>
       </div>
     </section>
 
@@ -121,28 +131,42 @@
       <h2>Contacto</h2>
 
       <div class="contacto-contenido">
-        <!-- Información personal -->
-        <div class="info-contacto">
-          <p><strong>Correo electrónico:</strong><br><a
-              href="mailto:7juanaramburo@gmail.com">7juanaramburo@gmail.com</a></p>
-          <p><strong>Teléfono:</strong><br><a href="tel:+526691234567">+52 669 123 4567</a></p>
-        </div>
-
         <!-- Formulario de contacto -->
         <form class="formulario-contacto" action="mailto:7juanaramburo@gmail.com" method="post" enctype="text/plain">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
+          <h3>Escríbeme un mensaje</h3>
 
-          <label for="correo">Correo electrónico:</label>
-          <input type="email" id="correo" name="correo" required>
+          <div class="input-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
 
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          <div class="input-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tuemail@ejemplo.com" required>
+          </div>
 
-          <button type="submit">Enviar</button>
+          <div class="input-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+          </div>
+
+          <button type="submit" class="btnEnviar">Enviar</button>
         </form>
+
+        <!-- Información de contacto -->
+        <div class="info-contacto">
+          <h3>Información</h3>
+          <p><strong>Correo electrónico:</strong><br>
+            <a href="mailto:7juanaramburo@gmail.com">7juanaramburo@gmail.com</a>
+          </p>
+          <p><strong>Teléfono:</strong><br>
+            <a href="tel:+526699129604">(+52) 669-912-96-04</a>
+          </p>
+        </div>
       </div>
     </section>
+
+
 
   </main>
 

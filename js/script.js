@@ -11,5 +11,3 @@ window.onscroll = function () {
 backToTopButton.onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
-
-
