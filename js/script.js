@@ -11,3 +11,16 @@ window.onscroll = function () {
 backToTopButton.onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
+const carrusel = document.querySelector('.imagenes-habilidades');
+const flechaIzq = document.querySelector('.flecha.izquierda');
+const flechaDer = document.querySelector('.flecha.derecha');
+
+flechaIzq.addEventListener('click', () => {
+  carrusel.scrollBy({ left: -100, behavior: 'smooth' });
+});
+
+flechaDer.addEventListener('click', () => {
+  carrusel.scrollBy({ left: 100, behavior: 'smooth' });
+});
+

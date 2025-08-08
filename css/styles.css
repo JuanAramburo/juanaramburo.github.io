@@ -178,6 +178,96 @@ section {
   margin: auto;
 }
 
+.carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.imagenes-habilidades {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 10px 20px 1px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.imagenes-habilidades img {
+  width: 60px;
+  height: auto;
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+/* Flechas */
+.flecha {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.flecha.izquierda { 
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.flecha.derecha { 
+  right: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.izquierda{
+  width: 30px;
+}
+
+.derecha{
+  width: 50px;
+}
+
+@media (min-width: 768px) {
+  .imagenes-habilidades {
+    justify-content: center;
+  }
+}
+
+
+/* Mostrar flechas solo en móviles */
+@media (max-width: 768px) {
+  .flecha { display: block; }
+  .flecha.izquierda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+  }
+  .flecha.derecha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+  }
+}
+
+
+
 
 .proyectos{
   background-color: #a7daff;
@@ -404,7 +494,7 @@ footer {
   background-color: #3F61DE;
   color: white;
   border: none;
-  padding: 20px 25px;
+  padding: 20px 20px;
   font-size: 20px;
   border-radius: 50%;
   cursor: pointer;
@@ -418,7 +508,7 @@ footer {
   background-color: #005fa3;
 }
 
-.flecha{
+.flechatop{
   width: 25px;
   height: 30px;
 }
